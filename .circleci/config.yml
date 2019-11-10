@@ -1,4 +1,6 @@
-version: 2
+version: 2.1
+orbs:
+  aws-s3: circleci/aws-s3@1.0.11
 jobs:
   build:
     docker:
@@ -6,3 +8,8 @@ jobs:
     steps:
       - checkout
       - run: script/ci
+      - aws-s3/sync:
+          from: script
+          to: AWS_S3_DESTINATION
+          aws-access-key-id: AWS_ACCESS_KEY_ID_BLUE
+          aws-secret-access-key: AWS_SECRET_ACCESS_KEY_BLUE
