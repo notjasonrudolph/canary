@@ -10,6 +10,7 @@ jobs:
       - aws-s3/sync:
           from: script
           to: AWS_S3_DESTINATION_BLUE
+          aws-region: AWS_REGION_BLUE
           aws-access-key-id: AWS_ACCESS_KEY_ID_BLUE
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY_BLUE
       - run: script/ci
