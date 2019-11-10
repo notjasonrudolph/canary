@@ -9,7 +9,7 @@ jobs:
       - checkout
       - aws-s3/sync:
           from: script
-          to: s3/workshop64.buildpulse-uploads
+          to: s3://workshop64.buildpulse-uploads
           aws-region: AWS_REGION_BLUE
           aws-access-key-id: AWS_ACCESS_KEY_ID_BLUE
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY_BLUE
