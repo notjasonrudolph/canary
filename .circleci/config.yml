@@ -7,8 +7,8 @@ jobs:
       - image: circleci/ruby:2.6
     steps:
       - checkout
-      - aws-s3/sync:
-          from: script
+      - aws-s3/copy:
+          from: script/ci
           to: s3://workshop64.buildpulse-uploads
           aws-region: AWS_REGION_BLUE
           aws-access-key-id: AWS_ACCESS_KEY_ID_BLUE
