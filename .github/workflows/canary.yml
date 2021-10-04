@@ -10,6 +10,7 @@ jobs:
   dispatch-canary:
     runs-on: ubuntu-latest
     steps:
+    - run: env | grep ^GITHUB_ | sort
     - uses: actions/checkout@v1
     - name: Create commit in canary repository
       env:
